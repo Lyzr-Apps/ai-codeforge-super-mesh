@@ -88,17 +88,24 @@ export default function Home() {
       // Create conversion message
       const message = `Convert the following code from ${sourceLanguage} to ${targetLanguage}:\n\n${sourceCode}`
 
+      console.log('Sending conversion request...')
+
       // Call AI agent
       const response = await callAIAgent(message, AGENT_ID)
 
+      console.log('Agent response:', response)
+
       if (response.success && response.response.status === 'success') {
+        console.log('Conversion successful:', response.response.result)
         setResult(response.response.result as ConversionResult)
         setSuccess(true)
         setTimeout(() => setSuccess(false), 5000)
       } else {
+        console.error('Conversion failed:', response.error)
         setError(response.error || 'Conversion failed. Please try again.')
       }
     } catch (err) {
+      console.error('Conversion error:', err)
       setError(err instanceof Error ? err.message : 'An unexpected error occurred')
     } finally {
       setLoading(false)
