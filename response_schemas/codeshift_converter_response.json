@@ -1,0 +1,62 @@
+{
+  "agent_name": "CodeShift Converter",
+  "agent_id": "6986efc5e31e7bbb7ef459fd",
+  "agent_purpose": "code_conversion",
+  "description": "Converts source code from one programming language to another with optimization and detailed explanations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "convertedCode": "string",
+      "explanation": "string",
+      "sourceLanguage": "string",
+      "targetLanguage": "string",
+      "conversionNotes": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "convertedCode": "def greet_user(name, age):\n    greeting = f\"Hello {name}, you are {age} years old!\"\n    return greeting",
+      "explanation": "The JavaScript function 'greetUser' is converted to a Python function 'greet_user'. The original function used a template literal for string interpolation, which in Python is implemented with an f-string. The function parameters and return statement remain consistent across both languages.",
+      "sourceLanguage": "JavaScript",
+      "targetLanguage": "Python",
+      "conversionNotes": [
+        "Converted JavaScript's template literal to Python's f-string for string interpolation.",
+        "Adapted JavaScript's camelCase naming convention to Python's snake_case for function name.",
+        "Both languages use similar syntax for function definition and return."
+      ]
+    },
+    "metadata": {
+      "agent_name": "CodeShift Converter",
+      "timestamp": "2023-10-03T18:30:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-07T07:55:48.514021",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "convertedCode": "def greet_user(name, age):\n    greeting = f\"Hello {name}, you are {age} years old!\"\n    return greeting",
+      "explanation": "The JavaScript function 'greetUser' is converted to a Python function 'greet_user'. The original function used a template literal for string interpolation, which in Python is implemented with an f-string. The function parameters and return statement remain consistent across both languages.",
+      "sourceLanguage": "JavaScript",
+      "targetLanguage": "Python",
+      "conversionNotes": [
+        "Converted JavaScript's template literal to Python's f-string for string interpolation.",
+        "Adapted JavaScript's camelCase naming convention to Python's snake_case for function name.",
+        "Both languages use similar syntax for function definition and return."
+      ]
+    },
+    "metadata": {
+      "agent_name": "CodeShift Converter",
+      "timestamp": "2023-10-03T18:30:00Z"
+    }
+  },
+  "test_passed": true
+}

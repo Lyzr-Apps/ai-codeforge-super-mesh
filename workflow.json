@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "Code Conversion Request",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "codeshift_converter_agent",
+      "type": "Agent",
+      "label": "CodeShift Converter",
+      "nodeCategory": "agent",
+      "agent_id": "6986efc5e31e7bbb7ef459fd"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Converted Code",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "codeshift_converter_agent"
+    },
+    {
+      "source": "codeshift_converter_agent",
+      "target": "output_node"
+    }
+  ]
+}

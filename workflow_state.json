@@ -1,0 +1,13 @@
+{
+  "agents": [
+    {
+      "agent_id": "6986efc5e31e7bbb7ef459fd",
+      "name": "CodeShift Converter",
+      "node_id": "codeshift_converter_agent",
+      "description": "AI-powered code conversion tool that transforms source code from one programming language to another while maintaining logic, optimizing for target language best practices, and providing clear explanations.",
+      "role": "Expert Code Conversion Specialist"
+    }
+  ],
+  "workflow_created": true,
+  "timestamp": "2026-02-07T00:00:00Z"
+}
